@@ -163,3 +163,16 @@ footer .footer-ods { margin-top: 5px; color: #a9c4b2; font-size: .82rem; }
   html { scroll-behavior: auto; }
   *,*::before,*::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+.enlace-paso { display: inline-block; margin-top: 1rem; font-weight: 700; color: var(--verde-oscuro); text-underline-offset: .2em; }
+.atajos { margin-top: 1.5rem; padding: 1rem; border: 1px solid var(--borde); border-radius: 14px; background: white; justify-content: flex-start; gap: .6rem; }
+.atajos strong { margin-right: .6rem; color: var(--verde-oscuro); }
+.atajos a { color: var(--verde-oscuro); background: var(--menta); }
+.atajos a:hover { color: white; background: var(--verde-oscuro); }
+.ejemplo { margin-top: 1rem; padding-top: .75rem; border-top: 1px solid var(--borde); }
+.ejemplo summary { color: var(--verde-oscuro); font-weight: 700; cursor: pointer; }
+.ejemplo p { margin: .65rem 0 .3rem; }
+.ejemplo small { color: var(--gris); }
+.preguntas dl { max-width: 760px; }
+.preguntas dt { border-top: 1px solid var(--borde); padding-top: 1rem; font-weight: 800; color: var(--verde-oscuro); }
+.preguntas dd { margin: .35rem 0 1rem; }

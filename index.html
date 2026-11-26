@@ -23,6 +23,7 @@
         <a href="#establecimientos">Establecimientos</a>
         <a href="#impacto">ODS 12</a>
         <a href="#galeria">Galería</a>
+        <a href="#preguntas">Preguntas frecuentes</a>
         <a class="nav-contacto" href="#contacto">Contáctanos</a>
       </nav>
     </div>
@@ -70,6 +71,7 @@
         <article class="paso">
           <span class="numero">01</span><div class="paso-icono" aria-hidden="true">⌕</div>
           <h3>Explora opciones</h3><p>Revisa los establecimientos y conoce qué tipos de alimentos podrían ofrecer.</p>
+          <a class="enlace-paso" href="#establecimientos">Ver ejemplos de establecimientos →</a>
         </article>
         <article class="paso">
           <span class="numero">02</span><div class="paso-icono" aria-hidden="true">▧</div>
@@ -84,6 +86,12 @@
           <h3>Disfruta y aprovecha</h3><p>Consume los alimentos de forma responsable y ayuda a evitar desperdicios.</p>
         </article>
       </div>
+      <nav class="atajos" aria-label="Continuar el recorrido">
+        <strong>Seguir explorando</strong>
+        <a href="#impacto">Consumo responsable</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
     </section>
 
     <section class="seccion" id="establecimientos">
@@ -94,16 +102,34 @@
       </div>
       <div class="tarjetas">
         <article class="tarjeta">
-          <img src="imagenes/panader#U00eda.jpg" alt="Variedad de panes y productos de panadería" loading="lazy">
-          <div class="tarjeta-cuerpo"><span class="categoria">PANADERÍA</span><h3>Panes y pastelería</h3><p>Productos del día que no se vendieron, pero que se mantienen aptos para el consumo.</p></div>
+          <img src="imagenes/panaderia.jpg" alt="Variedad de panes y productos de panadería" loading="lazy">
+          <div class="tarjeta-cuerpo"><span class="categoria">PANADERÍA</span><h3>Panes y pastelería</h3><p>Productos del día que no se vendieron, pero que se mantienen aptos para el consumo.</p>
+            <details class="ejemplo">
+              <summary>Ver ejemplo de bolsa</summary>
+              <p>Una bolsa con panes del día y una porción de pastelería.</p>
+              <small>Contenido ilustrativo. Puede variar.</small>
+            </details>
+          </div>
         </article>
         <article class="tarjeta">
           <img src="imagenes/frutas.verduras.jpg" alt="Frutas y verduras frescas" loading="lazy">
-          <div class="tarjeta-cuerpo"><span class="categoria">FRUTERÍAS Y TIENDAS</span><h3>Frutas y verduras</h3><p>Alimentos que pueden aprovecharse aunque no cumplan criterios comerciales de apariencia.</p></div>
+          <div class="tarjeta-cuerpo"><span class="categoria">FRUTERÍAS Y TIENDAS</span><h3>Frutas y verduras</h3><p>Alimentos que pueden aprovecharse aunque no cumplan criterios comerciales de apariencia.</p>
+            <details class="ejemplo">
+              <summary>Ver ejemplo de bolsa</summary>
+              <p>Una selección de plátanos maduros, manzanas y zanahorias.</p>
+              <small>Contenido ilustrativo. Puede variar.</small>
+            </details>
+          </div>
         </article>
         <article class="tarjeta">
           <img src="imagenes/alimentos.jpg" alt="Comida preparada lista para aprovechar" loading="lazy">
-          <div class="tarjeta-cuerpo"><span class="categoria">RESTAURANTES</span><h3>Comidas preparadas</h3><p>Excedentes que pueden ofrecerse respetando las condiciones de conservación y seguridad alimentaria.</p></div>
+          <div class="tarjeta-cuerpo"><span class="categoria">RESTAURANTES</span><h3>Comidas preparadas</h3><p>Excedentes que pueden ofrecerse respetando las condiciones de conservación y seguridad alimentaria.</p>
+            <details class="ejemplo">
+              <summary>Ver ejemplo de bolsa</summary>
+              <p>Una porción de arroz con verduras y una ensalada del menú del día.</p>
+              <small>Contenido ilustrativo. Puede variar.</small>
+            </details>
+          </div>
         </article>
       </div>
       <p class="nota">Nota: los establecimientos mostrados son categorías ilustrativas; esta página no confirma negocios afiliados ni disponibilidad de productos.</p>
@@ -152,6 +178,15 @@
       <p>Cada decisión de compra y consumo puede contribuir a reducir el desperdicio. Planificar, conservar adecuadamente y aprovechar los alimentos son acciones que suman.</p>
     </section>
 
+    <section class="seccion preguntas" id="preguntas" aria-labelledby="titulo-preguntas">
+      <div class="encabezado-seccion"><h2 id="titulo-preguntas">Preguntas frecuentes</h2></div>
+      <dl>
+        <dt>¿Qué es una bolsa sorpresa?</dt><dd>Es un conjunto de alimentos excedentes que un negocio reúne para aprovecharlos. Su contenido depende de los productos disponibles ese día.</dd>
+        <dt>¿Puedo comprar desde esta página?</dt><dd>Esta página es una demostración académica. Puedes explorar los ejemplos, pero las compras y reservas están fuera de esta demostración.</dd>
+        <dt>¿Los establecimientos que aparecen son reales?</dt><dd>Las tarjetas muestran tipos de negocios, como panaderías y restaurantes. Son ejemplos para explicar la idea del proyecto.</dd>
+      </dl>
+    </section>
+
     <section class="seccion contacto-seccion" id="contacto">
       <div class="contacto-info">
         <span class="sobrelinea">HABLEMOS</span>
@@ -183,8 +218,11 @@
     formulario.addEventListener('submit', function (evento) {
       evento.preventDefault();
       if (!formulario.reportValidity()) return;
-      mensaje.textContent = '¡Gracias! La prueba del formulario se completó correctamente. Esta demostración no envía tus datos.';
-      formulario.reset();
+      mensaje.textContent = 'Prueba completada. No se enviaron datos. Puedes editar tus respuestas y volver a probar.';
+    });
+
+    formulario.addEventListener('input', function () {
+      mensaje.textContent = '';
     });
   </script>
 </body>
